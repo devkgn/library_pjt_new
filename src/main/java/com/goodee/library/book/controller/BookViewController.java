@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.goodee.library.book.dto.BookDto;
 import com.goodee.library.book.service.BookService;
@@ -36,6 +37,13 @@ public class BookViewController {
 		return "book/add";
 	}
 	
+	@GetMapping("/book/{b_no}")
+	public String bookDetail(@PathVariable("b_no") long b_no, Model model) {
+		LOGGER.info("도서 상세 화면 이동");
+		BookDto dto = service.selectBookDetail(b_no);
+		model.addAttribute("bookDto",dto);
+		return "book/edit";
+	}
 
 
 }

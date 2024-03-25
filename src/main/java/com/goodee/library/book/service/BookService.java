@@ -45,4 +45,32 @@ public class BookService {
 	public List<BookDto> selectBookListToday(){
 		return dao.selectBookListToday();
 	}
+	
+	public BookDto selectBookDetail(long b_no) {
+		return dao.selectBookDetail(b_no);
+	}
+	
+	public Map<String,String> editBookDetail(BookDto dto){
+		Map<String,String> map = new HashMap<String,String>();
+		map.put("res_code", "404");
+		map.put("res_msg", "도서 정보 수정시 오류가 발생하였습니다.");
+		if(dao.updateBookDetail(dto)>0) {
+			map.put("res_code", "200");
+			map.put("res_msg", "도서 정보가 수정되었습니다.");
+		}
+		return map;
+	}
+	
+	public Map<String,String> deleteBookOne(long b_no){
+		Map<String,String> map = new HashMap<String,String>();
+		map.put("res_code", "404");
+		map.put("res_msg", "도서 정보 삭제시 오류가 발생하였습니다.");
+		if(dao.deleteBookOne(b_no) > 0) {
+			map.put("res_code", "200");
+			map.put("res_msg", "도서 정보가 삭제되었습니다.");
+		}
+		return map;
+	}
+	
+	
 }

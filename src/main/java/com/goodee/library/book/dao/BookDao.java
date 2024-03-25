@@ -67,4 +67,39 @@ public class BookDao {
 		}
 		return resultList;
 	}
+	
+	public BookDto selectBookDetail(long b_no) {
+		LOGGER.info("단일 도서 정보 조회");
+		BookDto result = new BookDto();
+		try {
+			result = sqlSession.selectOne(namespace+"selectBookDetail",b_no);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	public int updateBookDetail(BookDto dto) {
+		LOGGER.info("단일 도서 정보 수정");
+		int result = 0; 
+		try {
+			result = sqlSession.update(namespace+"updateBookDetail",dto);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	public int deleteBookOne(long b_no) {
+		LOGGER.info("도서 정보 삭제");
+		int result = 0; 
+		try {
+			result = sqlSession.delete(namespace+"deleteBookOne",b_no);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	
 }
