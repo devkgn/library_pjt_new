@@ -13,7 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class UploadFileService {
 	private static final Logger LOGGER = LogManager.getLogger(UploadFileService.class);
 	
-	private String uploadDir = "C:\\library\\upload\\";
+	private String uploadDir = "/var/lib/tomcat9/webapps/upload/";
 	
 	public String upload(MultipartFile file) {
 		LOGGER.info("파일 서버에 등록");
@@ -25,7 +25,7 @@ public class UploadFileService {
 		UUID uuid = UUID.randomUUID();
 		String uniqueName = uuid.toString().replaceAll("-", "");
 		
-		File saveFile = new File(uploadDir+"\\"+uniqueName+fileExtension);
+		File saveFile = new File(uploadDir+uniqueName+fileExtension);
 		
 		if(!saveFile.exists())
 			saveFile.mkdirs();
