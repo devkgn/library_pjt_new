@@ -5,10 +5,17 @@
 직원전용 시스템으로 직원들의 회원가입, 로그인, 목록, 정보 수정이 가능합니다.
 도서의 이미지를 포함한 각종 정보를 등록, 조회, 수정, 삭제가 가능합니다. 
 도서명으로 도서 검색, 도서 목록 페이징 등 다양한 편의 기능을 추가하였습니다.
+> [!CAUTION]
+> 소개글만 보고 어떤 프로젝트인지 파악할 수 있어야 합니다.
+> 개발자가 아닌 사람에게 소개글을 읽어줬을때 이해할 수 있는 수준으로 작성하세요.
+
 
 ### 목표
 회원과 도서 정보를 Create, Read, Update, Delete하는 시스템을 Spring Framework로 구현하여서
 웹 프로그래밍의 근간을 이루는 CRUD 게시판 구현의 개념을 확실히 습득하고자 하였습니다.
+> [!CAUTION]
+> 기존에 있는 웹 프로젝트들과의 차별점 혹은 개발 목표에 대해서 적습니다.
+
 
 ### 기능
 1. 회원
@@ -23,48 +30,28 @@
    - 도서 상세
    - 도서 수정
    - 도서 삭제
+> [!CAUTION]
+> 프로젝트 전체의 기능을 간략하게 적습니다.
 
 ### 스택
-<div style="margin: 0 auto; text-align: center;" align= "left"> 
-  <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=flat-square&logo=openjdk&logoColor=white">
-  <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white">
-  <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=flat-square&logo=css3&logoColor=white">
-  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=flat-square&logo=javascript&logoColor=%23F7DF1E">
-  <br>
-  <img src="https://img.shields.io/badge/Apache%20Maven-C71A36?style=flat-square&logo=Apache%20Maven&logoColor=white">
-  <img src="https://img.shields.io/badge/Gradle-02303A.svg?style=flat-square&logo=Gradle&logoColor=white">
-  <br>
-  <img src="https://img.shields.io/badge/Mybatis-181717.svg?style=flat-square&logo=Mybatis&logoColor=white"><br>
-  <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=flat-square&logo=spring&logoColor=white">
-  <img src="https://img.shields.io/badge/spring%20boot-%236DB33F.svg?style=flat-square&logo=springboot&logoColor=white"><br>
-  <img src="https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=flat-square&logo=intellij-idea&logoColor=white">
-  <img src="https://img.shields.io/badge/Eclipse-FE7A16.svg?style=flat-square&logo=Eclipse&logoColor=white">
-  <img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=flat-square&logo=visual-studio-code&logoColor=white"><br>
-  <img src="https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white">
-  <img src="https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white"><br>
-  <img src="https://img.shields.io/badge/jquery-%230769AD.svg?style=flat-square&logo=jquery&logoColor=white">
-  <img src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=flat-square&logo=bootstrap&logoColor=white">
-  <img src="https://img.shields.io/badge/JSP-3776AB.svg?style=flat-square&logo=JSP&logoColor=white">
-  <img src="https://img.shields.io/badge/JSON-3776AB.svg?style=flat-square&logo=JSON&logoColor=white"><br>
-  <img src="https://img.shields.io/badge/apache%20tomcat-%23F8DC75.svg?style=flat-square&logo=apache-tomcat&logoColor=black"><br>
-  <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=flat-square&logo=amazon-aws&logoColor=white">
-  <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white">
-  <img src="https://img.shields.io/badge/jenkins-%232C5263.svg?style=flat-square&logo=jenkins&logoColor=white">
-  <img src="https://img.shields.io/badge/github-%23121011.svg?style=flat-square&logo=github&logoColor=white">
-
-</div>
+| 언어 | DB | IDE | 빌드 | 배포 | 기술 |
+| --- | --- | --- | --- | --- | --- |
+|<img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=flat-square&logo=openjdk&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/css3-%231572B6.svg?style=flat-square&logo=css3&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/javascript-%23323330.svg?style=flat-square&logo=javascript&logoColor=%23F7DF1E">|<img src="https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white">|<img src="https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=flat-square&logo=intellij-idea&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/Eclipse-FE7A16.svg?style=flat-square&logo=Eclipse&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=flat-square&logo=visual-studio-code&logoColor=white">|<img src="https://img.shields.io/badge/Apache%20Maven-C71A36?style=flat-square&logo=Apache%20Maven&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/Gradle-02303A.svg?style=flat-square&logo=Gradle&logoColor=white">|<img src="https://img.shields.io/badge/apache%20tomcat-%23F8DC75.svg?style=flat-square&logo=apache-tomcat&logoColor=black">&nbsp;<img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=flat-square&logo=amazon-aws&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/jenkins-%232C5263.svg?style=flat-square&logo=jenkins&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/github-%23121011.svg?style=flat-square&logo=github&logoColor=white">|<img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=flat-square&logo=spring&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/spring%20boot-%236DB33F.svg?style=flat-square&logo=springboot&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/Mybatis-181717.svg?style=flat-square&logo=Mybatis&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/jquery-%230769AD.svg?style=flat-square&logo=jquery&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=flat-square&logo=bootstrap&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/JSP-3776AB.svg?style=flat-square&logo=JSP&logoColor=white">&nbsp;<img src="https://img.shields.io/badge/JSON-3776AB.svg?style=flat-square&logo=JSON&logoColor=white">|
+> [!CAUTION]
+> 프로젝트와 관련한 스택을 제외하고 모두 삭제해주세요.
 
 ### DB구성
+> [!CAUTION]
+> Github 프로젝트의 Issues 탭에서 New Issue로 이미지를 업로드 하시면 html 이미지 태그를 복사할 수 있습니다. 
 <img width="461" alt="ERD" src="https://github.com/devkgn/guestbook/assets/149357993/12db5177-92a1-4430-82c6-b51f0998e0df">
 
-## 설치방법
-### Git Clone
+## 사용방법
+> [!CAUTION]
+> 프로젝트 접근 방법을 꾸준히 확인하세요.
+> 아래 정보로 프로젝트를 사용할 수 없으면 지워주세요.
+### 주소
 ```
-# git clone https://github.com/devkgn/library_pjt_new.git
-```
-### Server
-```
-# apache-tomcat-9.0.87\bin\startup.bat
+# 192.168.0.XXX/library_pjt
 ```
 ### Login
 - ID : admin
